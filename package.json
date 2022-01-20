@@ -1,0 +1,24 @@
+{
+  "name": "mf-project-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Deepak Oli",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "wsrun": "^5.2.4"
+  },
+  "workspaces": {
+    "packages": [
+      "main",
+      "components",
+      "store",
+      "dashboard"
+    ]
+  },
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "start": "concurrently \"wsrun --parallel start\""
+  }
+}
